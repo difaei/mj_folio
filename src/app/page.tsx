@@ -35,7 +35,7 @@ export default function HomePage() {
     const form = e.currentTarget;
     const action = form.action;
 
-    if (action.includes("YOUR_FORM_ID")) {
+    if (!action.includes("formspree.io/f/") || action.includes("YOUR_FORM_ID")) {
       const data = new FormData(form);
       const subject = encodeURIComponent(data.get("subject") as string);
       const body = encodeURIComponent(
@@ -97,7 +97,7 @@ export default function HomePage() {
           <div className="hero-photo-frame">
             <div className="hero-photo">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/simo.jpg" alt="Mohammed Jamal" />
+              <img src="/images/simo.jpeg" alt="Mohammed Jamal" />
             </div>
             <div className="hero-photo-tag">
               <span className="hero-photo-tag-l">Based in</span>
@@ -488,7 +488,7 @@ export default function HomePage() {
         </RevealOnScroll>
         <RevealOnScroll delay={3}>
           <div className="contact-layout">
-            <form className="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onSubmit={handleContactSubmit}>
+            <form className="contact-form" action="https://formspree.io/f/xkoejdne" method="POST" onSubmit={handleContactSubmit}>
               <div className="cf-row">
                 <div className="cf-field">
                   <label className="cf-label" htmlFor="cf-name">Your Name</label>
