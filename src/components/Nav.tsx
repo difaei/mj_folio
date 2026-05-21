@@ -21,7 +21,7 @@ export default function Nav({ onOpenCV }: NavProps) {
   return (
     <nav id="nav" className={scrolled ? "scrolled" : ""}>
       <Link href="/#hero" className="nav-brand">
-        <Image src="/images/SJ.png" alt="Simo" width={32} height={32} className="nav-brand-avatar" />
+        <Image src="/images/SJ.png" alt="Simo" width={44} height={44} className="nav-brand-avatar" />
         Mohammed Jamal
       </Link>
       <div className="nav-links">

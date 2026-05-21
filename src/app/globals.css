@@ -93,7 +93,7 @@ nav.scrolled {
   flex-shrink: 0;
 }
 .nav-brand-dot { width: 8px; height: 8px; background: var(--sage); border-radius: 50%; }
-.nav-brand-avatar { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; }
+.nav-brand-avatar { width: 44px; height: 44px; object-fit: contain; }
 .nav-links { display: flex; align-items: center; gap: 28px; flex: 1; justify-content: center; }
 .nav-links a {
   font-family: var(--mono);
