@@ -1,0 +1,164 @@
+export type ProjectStatus = "live" | "side" | "building";
+
+export interface Project {
+  slug: string;
+  name: string;
+  category: string;
+  status: ProjectStatus;
+  tagline: string;
+  blurb: string;
+  description: string;
+  features: string[];
+  stack: string[];
+  liveUrl: string | null;
+  githubUrl: string | null;
+  screenshots: string[];
+  hasPrivacyPolicy: boolean;
+  hasSupport: boolean;
+}
+
+export const PROJECTS: Project[] = [
+  {
+    slug: "travel-ai",
+    name: "Travel AI Planner",
+    category: "AI · SaaS",
+    status: "side",
+    tagline: "Where can your passport take you?",
+    blurb:
+      "AI-powered trip planner that suggests destinations based on your passport's visa-free countries and budget.",
+    description:
+      "A travel discovery tool that flips the usual planning model. Instead of picking a destination first, you start with what you have — your passport and your budget — and the AI suggests where you can actually go without visa hassles.",
+    features: [
+      "Passport-aware destination filtering across 150+ countries",
+      "Budget-based recommendations with realistic cost breakdowns",
+      "AI-generated daily itineraries with stays, food, and activities",
+      "Multi-language support",
+    ],
+    stack: ["React", "OpenAI API", "Supabase", "TypeScript", "Tailwind"],
+    liveUrl: null,
+    githubUrl: null,
+    screenshots: [],
+    hasPrivacyPolicy: false,
+    hasSupport: false,
+  },
+  {
+    slug: "menuqr",
+    name: "MenuQR",
+    category: "SaaS",
+    status: "side",
+    tagline: "Restaurant menus, reinvented for mobile.",
+    blurb:
+      "Digital QR-code menus for restaurants. Multi-language, image-rich, with kitchen order routing.",
+    description:
+      "A complete digital menu solution for restaurants. Customers scan a QR code at the table, browse the menu in their preferred language with real food photos, and orders flow directly to the kitchen.",
+    features: [
+      "QR-to-menu in under 2 seconds",
+      "Multi-language menu display (Arabic, English, French, more)",
+      "High-quality food images with ingredient details",
+      "Direct order routing to kitchen tablet",
+      "Stripe-powered payments at the table",
+    ],
+    stack: ["React", "Stripe", "Postgres", "Cloudflare Workers", "Tailwind"],
+    liveUrl: null,
+    githubUrl: null,
+    screenshots: [],
+    hasPrivacyPolicy: true,
+    hasSupport: true,
+  },
+  {
+    slug: "doctor-saas",
+    name: "Doctor SaaS",
+    category: "SaaS · Healthcare",
+    status: "side",
+    tagline: "Clinics still running on spreadsheets, finally got an upgrade.",
+    blurb:
+      "Clinic management platform — patient records, appointments, billing, and prescriptions.",
+    description:
+      "A complete clinic management platform built for small to mid-size healthcare practices.",
+    features: [
+      "Patient records with encrypted sensitive data",
+      "Smart appointment scheduling with reminders",
+      "Billing & invoicing with insurance support",
+      "Digital prescriptions",
+      "Multi-doctor and multi-location support",
+    ],
+    stack: ["Vue 3", "NestJS", "Postgres", "AWS", "Redis"],
+    liveUrl: null,
+    githubUrl: null,
+    screenshots: [],
+    hasPrivacyPolicy: true,
+    hasSupport: true,
+  },
+  {
+    slug: "cv-screener",
+    name: "AI CV Screener",
+    category: "AI Tool",
+    status: "building",
+    tagline: "Hire smarter, not harder.",
+    blurb:
+      "Drop a job description and CVs, get a ranked shortlist with AI reasoning.",
+    description:
+      "Reads CVs the way a thoughtful recruiter would. Drop a JD and CVs, get a ranked shortlist with clear reasoning.",
+    features: [
+      "Bulk CV upload and parsing (PDF, DOCX, TXT)",
+      "Match scoring against your specific job description",
+      "AI-generated reasoning for each candidate",
+      "Highlights gaps, red flags, and standout strengths",
+      "Export shortlist to CSV or share via link",
+    ],
+    stack: ["Python", "LangChain", "Claude API", "FastAPI", "React"],
+    liveUrl: null,
+    githubUrl: null,
+    screenshots: [],
+    hasPrivacyPolicy: false,
+    hasSupport: false,
+  },
+  {
+    slug: "helpdesk-bot",
+    name: "IT Helpdesk Bot",
+    category: "AI · Automation",
+    status: "building",
+    tagline: "IT support that doesn't sleep — or get tired.",
+    blurb:
+      "AI-powered IT support chatbot. Handles tier-1 tickets, answers in 4 languages.",
+    description:
+      "Built from my own experience as IT support. Handles tier-1 tickets automatically in 4 languages, escalates the rest.",
+    features: [
+      "Handles password resets, VPN issues, common how-tos",
+      "Replies in Arabic, English, French, and Mandarin",
+      "Logs every conversation to Google Sheets",
+      "Escalates complex issues to human staff via Slack",
+      "Built on n8n — easy for any team to customize",
+    ],
+    stack: ["n8n", "Claude API", "Slack API", "Google Sheets"],
+    liveUrl: null,
+    githubUrl: null,
+    screenshots: [],
+    hasPrivacyPolicy: false,
+    hasSupport: false,
+  },
+  {
+    slug: "email-triage",
+    name: "AI Email Triage Bot",
+    category: "Automation",
+    status: "building",
+    tagline: "Inbox zero, automated.",
+    blurb:
+      "Reads incoming emails, classifies urgency with AI, drafts replies, logs to Sheets.",
+    description:
+      "For small businesses drowning in inbox chaos. Reads each email, classifies it, drafts a reply, logs everything.",
+    features: [
+      "Auto-classifies emails: urgent, inquiry, complaint, spam, other",
+      "Drafts professional replies in the sender's language",
+      "Logs every email to Google Sheets with full metadata",
+      "Notifies team on Slack for high-priority items",
+      "Setup in under 30 minutes",
+    ],
+    stack: ["n8n", "Claude API", "Gmail API", "Google Sheets"],
+    liveUrl: null,
+    githubUrl: null,
+    screenshots: [],
+    hasPrivacyPolicy: false,
+    hasSupport: false,
+  },
+];
