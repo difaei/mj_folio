@@ -83,7 +83,7 @@ export default async function ProjectPage({ params }: Props) {
               <div className="shot-url">{project.liveUrl || `${project.slug}.simojamal.com`}</div>
             </div>
             <div className="shot-canvas" style={{ aspectRatio: "16/9" }}>
-              {project.screenshots[0] ? (
+              {project.screenshots?.[0] ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={project.screenshots[0]} alt={`${project.name} screenshot`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               ) : (

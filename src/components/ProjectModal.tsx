@@ -4,6 +4,24 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { Project } from "@/content/projects";
 import { ProjectIcon } from "./ProjectIcons";
+import PhoneMockup from "./PhoneMockup";
+import {
+  HomeScreen,
+  InsightsScreen,
+  BudgetsScreen,
+  GoalsScreen,
+  GoalDetailScreen,
+  TransactionsScreen,
+} from "@/content/beztami-screens";
+
+const BEZTAMI_SCREENS = [
+  <HomeScreen key="home" />,
+  <InsightsScreen key="insights" />,
+  <BudgetsScreen key="budgets" />,
+  <GoalsScreen key="goals" />,
+  <GoalDetailScreen key="goal-detail" />,
+  <TransactionsScreen key="txns" />,
+];
 
 interface Props {
   project: Project | null;
@@ -55,40 +73,46 @@ export default function ProjectModal({ project, onClose }: Props) {
 
         <div className="modal-screenshots">
           <div className="modal-section-label">Preview</div>
-          <div className="shot-frame">
-            <div className="shot-bar">
-              <div className="shot-dots">
-                <div className="shot-dot" style={{ background: "#ff5f57" }} />
-                <div className="shot-dot" style={{ background: "#febc2e" }} />
-                <div className="shot-dot" style={{ background: "#28c840" }} />
-              </div>
-              <div className="shot-url">
-                {project.liveUrl || `${project.slug}.simojamal.com`}
-              </div>
+          {project.mockupType === "phone" ? (
+            <div style={{ padding: "24px 0 8px" }}>
+              <PhoneMockup screens={BEZTAMI_SCREENS} />
             </div>
-            <div className="shot-canvas">
-              {project.screenshots[0] ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={project.screenshots[0]}
-                  alt={`${project.name} screenshot`}
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-              ) : (
-                <div className="shot-placeholder">
-                  <svg className="shot-placeholder-svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-                    <rect x="4" y="8" width="48" height="36" rx="3" stroke="#8A9A7B" strokeWidth="2" strokeDasharray="4 4" fill="none" />
-                    <circle cx="20" cy="22" r="4" fill="#C8D2BE" />
-                    <path d="M10 38L22 28L30 34L46 20" stroke="#8A9A7B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                  </svg>
-                  Screenshot placeholder
-                  <span className="shot-placeholder-text">
-                    Add image: /images/{project.slug}-1.png
-                  </span>
+          ) : (
+            <div className="shot-frame">
+              <div className="shot-bar">
+                <div className="shot-dots">
+                  <div className="shot-dot" style={{ background: "#ff5f57" }} />
+                  <div className="shot-dot" style={{ background: "#febc2e" }} />
+                  <div className="shot-dot" style={{ background: "#28c840" }} />
                 </div>
-              )}
+                <div className="shot-url">
+                  {project.liveUrl || `${project.slug}.simojamal.com`}
+                </div>
+              </div>
+              <div className="shot-canvas">
+                {project.screenshots?.[0] ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={project.screenshots[0]}
+                    alt={`${project.name} screenshot`}
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  />
+                ) : (
+                  <div className="shot-placeholder">
+                    <svg className="shot-placeholder-svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                      <rect x="4" y="8" width="48" height="36" rx="3" stroke="#8A9A7B" strokeWidth="2" strokeDasharray="4 4" fill="none" />
+                      <circle cx="20" cy="22" r="4" fill="#C8D2BE" />
+                      <path d="M10 38L22 28L30 34L46 20" stroke="#8A9A7B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    </svg>
+                    Screenshot placeholder
+                    <span className="shot-placeholder-text">
+                      Add image: /images/{project.slug}-1.png
+                    </span>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         <div className="modal-body">

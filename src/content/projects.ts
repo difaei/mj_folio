@@ -12,12 +12,42 @@ export interface Project {
   stack: string[];
   liveUrl: string | null;
   githubUrl: string | null;
-  screenshots: string[];
+  screenshots?: string[];
+  mockupType?: "browser" | "phone";
+  hasCustomPage?: boolean;
   hasPrivacyPolicy: boolean;
   hasSupport: boolean;
 }
 
 export const PROJECTS: Project[] = [
+  {
+    slug: "beztami",
+    name: "beztami",
+    category: "Mobile App · Finance",
+    status: "live",
+    tagline: "Your money. Your phone. Nobody else.",
+    blurb:
+      "A privacy-first personal finance app that tracks your spending automatically via SMS — no accounts, no cloud, no data leaving your device.",
+    description:
+      "Most finance apps want your bank login, your data, and your trust. beztami wants none of that. It reads your bank SMS notifications locally on your device, categorizes transactions automatically, and gives you a full picture of your finances — budgets, goals, insights, merchant history — without ever sending a byte to a server.",
+    features: [
+      "Automatic transaction parsing from bank SMS notifications",
+      "Smart categorization across Groceries, Food & Drink, Transport, Bills, and more",
+      "Monthly budgets with ON TRACK / NEAR LIMIT / OVER BUDGET tracking",
+      "Savings goals with milestone tracking and monthly pace calculations",
+      "Insights dashboard — 6-month spend trends, category breakdown, merchant analysis",
+      "Multi-currency support with live conversion display",
+      "Encrypted local backup and restore — no account needed",
+      "Full privacy: all data stays on your device, zero analytics, zero uploads",
+    ],
+    stack: ["React Native", "Expo", "expo-sqlite", "expo-router", "Reanimated", "TypeScript"],
+    liveUrl: null,
+    githubUrl: null,
+    mockupType: "phone",
+    hasCustomPage: true,
+    hasPrivacyPolicy: true,
+    hasSupport: true,
+  },
   {
     slug: "travel-ai",
     name: "Travel AI Planner",
@@ -58,7 +88,7 @@ export const PROJECTS: Project[] = [
       "Direct order routing to kitchen tablet",
       "Stripe-powered payments at the table",
     ],
-    stack: ["React", "Stripe", "Postgres", "Cloudflare Workers", "Tailwind"],
+    stack: ["React", "Vercel Edge", "Supabase", "Postgres", "Tailwind"],
     liveUrl: null,
     githubUrl: null,
     screenshots: [],
@@ -82,7 +112,7 @@ export const PROJECTS: Project[] = [
       "Digital prescriptions",
       "Multi-doctor and multi-location support",
     ],
-    stack: ["Vue 3", "NestJS", "Postgres", "AWS", "Redis"],
+    stack: ["Wails 3", "Golang", "Postgres", "AWS", "Redis"],
     liveUrl: null,
     githubUrl: null,
     screenshots: [],

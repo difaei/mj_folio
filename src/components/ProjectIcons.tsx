@@ -1,5 +1,14 @@
 export function ProjectIcon({ slug, size = 32 }: { slug: string; size?: number }) {
   const icons: Record<string, React.ReactElement> = {
+    beztami: (
+      <svg width={size} height={size} viewBox="0 0 32 32" fill="none">
+        <rect x="4" y="4" width="16" height="24" rx="3" fill="#1F2937" />
+        <rect x="6" y="7" width="12" height="16" rx="1" fill="#374151" />
+        <rect x="9" y="25.5" width="6" height="1.5" rx="0.75" fill="#5C6A52" />
+        <circle cx="21" cy="12" r="7" fill="#E8B53D" />
+        <path d="M21 16V10M18.5 12.5L21 10L23.5 12.5" stroke="#1F2937" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
     "travel-ai": (
       <svg width={size} height={size} viewBox="0 0 32 32" fill="none">
         <path
