@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface NavProps {
   onOpenCV?: () => void;
@@ -20,7 +21,7 @@ export default function Nav({ onOpenCV }: NavProps) {
   return (
     <nav id="nav" className={scrolled ? "scrolled" : ""}>
       <Link href="/#hero" className="nav-brand">
-        <span className="nav-brand-dot" />
+        <Image src="/images/SJ.png" alt="Simo" width={32} height={32} className="nav-brand-avatar" />
         Mohammed Jamal
       </Link>
       <div className="nav-links">

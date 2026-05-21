@@ -28,12 +28,17 @@ export const metadata: Metadata = {
     "Six years building and supporting IT systems, with a growing focus on AI automation. Multilingual, hands-on, and obsessed with making things work better.",
   keywords: ["IT Specialist", "Systems", "AI Automation", "Dubai", "Mohammed Jamal"],
   authors: [{ name: "Mohammed Jamal" }],
+  icons: {
+    icon: "/images/SJ.png",
+    apple: "/images/SJ.png",
+  },
   openGraph: {
     title: "Mohammed Jamal — IT & Systems Specialist",
     description:
       "Six years building and supporting IT systems, with a growing focus on AI automation.",
     url: "https://simojamal.com",
     siteName: "simojamal.com",
+    images: [{ url: "/images/SJ.png", width: 400, height: 400 }],
     locale: "en_US",
     type: "website",
   },
