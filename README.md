@@ -79,4 +79,4 @@ More skills added as I build them.
 
 ## Contact
 
-[simojamal.com](https://simojamal.com) · [linkedin.com/in/mohammedjamal1995](https://linkedin.com/in/mohammedjamal1995) · [@simojamal](https://github.com/difaei)
+[simojamal.com](https://simojamal.com) · [linkedin.com/in/mohammedjamal1995](https://linkedin.com/in/mohammedjamal1995) · [@difaei](https://github.com/difaei)
