@@ -41,7 +41,7 @@ export default function HomePage() {
       const body = encodeURIComponent(
         `From: ${data.get("name")} <${data.get("email")}>\n\n${data.get("message")}`
       );
-      window.location.href = `mailto:REDACTED?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:${process.env.NEXT_PUBLIC_EMAIL}?subject=${subject}&body=${body}`;
       return;
     }
 
@@ -534,7 +534,7 @@ export default function HomePage() {
                 <div className="cf-status show success">✓ Message sent! I&apos;ll get back to you within 24 hours.</div>
               )}
               {formStatus === "error" && (
-                <div className="cf-status show error">✗ Something went wrong. Try emailing REDACTED directly.</div>
+                <div className="cf-status show error">✗ Something went wrong. Try emailing {process.env.NEXT_PUBLIC_EMAIL} directly.</div>
               )}
             </form>
 
@@ -550,13 +550,13 @@ export default function HomePage() {
                 <span className="contact-card-arrow">→</span>
               </a>
 
-              <a href="mailto:REDACTED" className="contact-card">
+              <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} className="contact-card">
                 <div className="contact-card-icon email">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="M22 6L12 13 2 6" /></svg>
                 </div>
                 <div className="contact-card-content">
                   <div className="contact-card-label">Email</div>
-                  <div className="contact-card-value">REDACTED</div>
+                  <div className="contact-card-value">{process.env.NEXT_PUBLIC_EMAIL}</div>
                 </div>
                 <span className="contact-card-arrow">→</span>
               </a>

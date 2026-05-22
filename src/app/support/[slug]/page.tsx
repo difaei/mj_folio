@@ -44,7 +44,7 @@ export default async function SupportPage({ params }: Props) {
         </p>
         <p style={{ marginBottom: "8px" }}>
           📧 Email:{" "}
-          <a href="mailto:REDACTED" style={{ color: "var(--sage-dark)" }}>REDACTED</a>
+          <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} style={{ color: "var(--sage-dark)" }}>{process.env.NEXT_PUBLIC_EMAIL}</a>
         </p>
         <p style={{ marginBottom: "32px" }}>
           💬 WhatsApp:{" "}

@@ -49,7 +49,7 @@ export default async function LegalPage({ params }: Props) {
         <p style={{ marginBottom: "16px" }}>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
         <h2 style={{ fontFamily: "var(--display)", fontSize: "20px", fontWeight: 700, color: "var(--navy)", marginBottom: "12px", marginTop: "32px" }}>Contact Us</h2>
         <p>If you have any questions about this Privacy Policy, please contact us at{" "}
-          <a href="mailto:REDACTED" style={{ color: "var(--sage-dark)" }}>REDACTED</a>.
+          <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} style={{ color: "var(--sage-dark)" }}>{process.env.NEXT_PUBLIC_EMAIL}</a>.
         </p>
       </div>
     </main>

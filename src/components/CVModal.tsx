@@ -37,7 +37,7 @@ export default function CVModal({ open, onClose }: Props) {
             <div className="cv-preview-name">Mohammed Jamal</div>
             <div className="cv-preview-role">IT &amp; Systems Specialist</div>
             <div className="cv-preview-contact">
-              REDACTED · {process.env.NEXT_PUBLIC_PHONE} · Dubai, UAE · linkedin.com/in/mohammedjamal1995
+              {process.env.NEXT_PUBLIC_EMAIL} · {process.env.NEXT_PUBLIC_PHONE} · Dubai, UAE · linkedin.com/in/mohammedjamal1995
             </div>
 
             <div className="cv-section">
