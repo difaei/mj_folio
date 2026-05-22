@@ -80,13 +80,13 @@ export default function HomePage() {
             <strong>AI automation</strong>. Multilingual, hands-on, and obsessed with making things work better.
           </p>
           <div className="hero-actions">
-            <button className="btn btn-cv" onClick={() => setCvOpen(true)}>📄 View CV</button>
+            <button className="btn btn-cv" onClick={() => setCvOpen(true)}>View CV</button>
             <a href="#projects" className="btn btn-primary">Explore Work →</a>
             <a href="#contact" className="btn btn-ghost">Get In Touch</a>
           </div>
           <div className="hero-availability">
             <span className="hero-availability-dot" />
-            Open to opportunities · Dubai or remote · Available now
+            Open to opportunities · Flexible · Available now
           </div>
           <div className="hero-meta">
             <div className="hero-meta-row"><span className="hero-meta-dot" />{clock} GST</div>
@@ -121,30 +121,50 @@ export default function HomePage() {
         <div className="do-grid">
           {[
             {
-              icon: "🖥️", variant: "",
+              icon: (
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" /><path d="M8 21h8M12 17v4" />
+                </svg>
+              ),
+              variant: "",
               title: "IT Support & Systems",
               desc: "End-to-end IT support — from hardware to software, networks to servers. Six years keeping systems running and users happy.",
               tags: ["Windows", "macOS", "Network Admin", "Google Workspace"],
               delay: 1,
             },
             {
-              icon: "📞", variant: "sun",
+              icon: (
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.8 19.8 0 01.01 1.22 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 14.92v2z" />
+                </svg>
+              ),
+              variant: "sun",
               title: "VoIP & Communication Systems",
-              desc: "3CX IP communication systems specialist — installation, configuration, maintenance, and end-user training. A rare and in-demand specialty.",
+              desc: "3CX IP communication systems specialist — installation, configuration, maintenance, and end-user training.",
               tags: ["3CX", "VoIP", "PBX", "SIP Trunks"],
               delay: 2,
             },
             {
-              icon: "🤖", variant: "rust",
+              icon: (
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2a4 4 0 014 4v1h1a3 3 0 013 3v8a3 3 0 01-3 3H7a3 3 0 01-3-3v-8a3 3 0 013-3h1V6a4 4 0 014-4z" /><circle cx="9" cy="13" r="1" fill="currentColor" /><circle cx="15" cy="13" r="1" fill="currentColor" /><path d="M9 17s1 1 3 1 3-1 3-1" />
+                </svg>
+              ),
+              variant: "rust",
               title: "AI Automation & Workflows",
-              desc: "Building AI-powered automations with n8n, Claude API, and modern tools that save hours of manual work — from email triage to ticket routing.",
+              desc: "Building AI-powered automations with n8n, Claude API, and modern tools that cut hours of manual work — from email triage to ticket routing.",
               tags: ["n8n", "Make.com", "Claude API", "Webhooks"],
               delay: 3,
             },
             {
-              icon: "🌍", variant: "navy",
+              icon: (
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" />
+                </svg>
+              ),
+              variant: "navy",
               title: "Training & Multilingual Support",
-              desc: "Designing technical training programs and supporting users across four languages — bridging the gap between systems and the people who use them.",
+              desc: "Designing technical training programs and supporting users in Arabic, English, French, and Mandarin. Most support issues are a communication problem as much as a technical one.",
               tags: ["Arabic", "English", "French", "Mandarin"],
               delay: 4,
             },
@@ -201,7 +221,7 @@ export default function HomePage() {
             },
             {
               num: "03", title: "Development",
-              desc: "Comfortable building tools and small applications when needed.",
+              desc: "Building tools and small applications from scratch — enough to ship without waiting for a developer.",
               tags: [
                 { label: "Python" }, { label: "JavaScript" }, { label: "HTML / CSS" },
                 { label: "Web Development" }, { label: "GitHub" }, { label: "Vercel" },
@@ -251,7 +271,6 @@ export default function HomePage() {
         <RevealOnScroll delay={1}>
           <p className="proj-intro">
             A mix of products I&apos;ve shipped and tools I&apos;m currently building — nights and weekends.
-            They&apos;re how I stay sharp on new technologies and explore ideas outside my day job.
           </p>
         </RevealOnScroll>
         <RevealOnScroll delay={2}>
@@ -323,7 +342,7 @@ export default function HomePage() {
               points: [
                 "Provided daily technical support for over 200 users, resolving hardware, software, and network-related issues.",
                 "Administered and supported Google Workspace for Education — managing user accounts, data security, and cloud-based collaboration tools.",
-                "Oversaw the setup, configuration, and maintenance of servers, routers, switches, and end-user devices, significantly reducing system downtime.",
+                "Oversaw the setup, configuration, and maintenance of servers, routers, switches, and end-user devices.",
                 "Coordinated with vendors to scope and procure IT resources and support digital initiatives.",
               ],
             },
@@ -341,10 +360,10 @@ export default function HomePage() {
               date: "Jan 2022 — Aug 2022", loc: "Dubai, UAE",
               role: "Digital Marketing Officer", company: "Cyber Elements Technologies",
               points: [
-                "Created compelling content resulting in a 40% increase in website traffic.",
-                "Provided customer support across phone, email, and chat, maintaining a 95% customer satisfaction rate.",
-                "Conducted training sessions for new employees on customer service and digital marketing skills.",
-                "Leveraged influencer marketing to promote campaigns, increasing brand visibility by 25%.",
+                "Created content across social and SEO channels that drove consistent traffic growth.",
+                "Handled customer support across phone, email, and chat.",
+                "Trained new hires on customer service processes and digital marketing tools.",
+                "Ran influencer marketing campaigns to grow brand awareness.",
               ],
             },
             {
@@ -483,7 +502,7 @@ export default function HomePage() {
         </RevealOnScroll>
         <RevealOnScroll delay={2}>
           <p className="contact-intro">
-            Whether you&apos;re hiring, looking to collaborate, or just want to say hi — I&apos;d love to hear from you. Arabic, English, French, or Mandarin — your choice.
+            Hiring, building something, or just reaching out — pick a channel below. Arabic, English, French, or Mandarin — your choice.
           </p>
         </RevealOnScroll>
         <RevealOnScroll delay={3}>
@@ -520,13 +539,13 @@ export default function HomePage() {
             </form>
 
             <div className="contact-side">
-              <a href="https://wa.me/REDACTED?text=Hi%20Mohammed%2C%20I%20saw%20your%20portfolio%20and%20wanted%20to%20reach%20out." target="_blank" rel="noopener noreferrer" className="contact-card">
+              <a href={`https://wa.me/${(process.env.NEXT_PUBLIC_PHONE ?? '').replace(/[^0-9]/g, '')}?text=Hi%20Mohammed%2C%20I%20saw%20your%20portfolio%20and%20wanted%20to%20reach%20out.`} target="_blank" rel="noopener noreferrer" className="contact-card">
                 <div className="contact-card-icon whatsapp">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
                 </div>
                 <div className="contact-card-content">
                   <div className="contact-card-label">WhatsApp · fastest reply</div>
-                  <div className="contact-card-value">REDACTED</div>
+                  <div className="contact-card-value">{process.env.NEXT_PUBLIC_PHONE}</div>
                 </div>
                 <span className="contact-card-arrow">→</span>
               </a>

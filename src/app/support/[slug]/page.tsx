@@ -48,7 +48,7 @@ export default async function SupportPage({ params }: Props) {
         </p>
         <p style={{ marginBottom: "32px" }}>
           💬 WhatsApp:{" "}
-          <a href="https://wa.me/REDACTED" target="_blank" rel="noopener noreferrer" style={{ color: "var(--sage-dark)" }}>REDACTED</a>
+          <a href={`https://wa.me/${(process.env.NEXT_PUBLIC_PHONE ?? '').replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer" style={{ color: "var(--sage-dark)" }}>{process.env.NEXT_PUBLIC_PHONE}</a>
         </p>
         <p style={{ fontSize: "13px", color: "var(--navy-soft)" }}>
           We typically respond within 24 hours.
