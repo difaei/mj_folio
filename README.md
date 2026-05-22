@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# simojamal.com
 
-## Getting Started
+Personal website and project platform for Mohammed Jamal (Simo) — IT & Systems Specialist based in Dubai, with a growing focus on AI automation.
 
-First, run the development server:
+**Live site:** [simojamal.com](https://simojamal.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## What's here
+
+A Next.js platform that serves three purposes:
+
+- **Portfolio & homepage** — who I am, what I do, experience, and contact
+- **Project pages** — individual pages for each project I've built or am building
+- **Legal & support pages** — privacy policies and support URLs for App Store / Play Store submissions (accessible by URL, hidden from navigation)
+
+---
+
+## Stack
+
+| Layer | Choice |
+|---|---|
+| Framework | Next.js 15 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| Forms | Formspree |
+| Deploy | Vercel |
+| Analytics | Vercel Analytics |
+
+Typography: **Fraunces** (display) · **Public Sans** (body) · **JetBrains Mono** (labels)
+
+---
+
+## Project structure
+
+```
+src/
+  app/
+    page.tsx              # Homepage
+    projects/[slug]/      # Dynamic project pages
+    legal/[slug]/         # Privacy policies (not in nav)
+    support/[slug]/       # App support pages (not in nav)
+  components/             # Shared UI components
+content/
+  projects.ts             # All project data in one place
+public/
+  cv/                     # CV PDF
+  images/                 # Photos and project screenshots
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Running locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000).
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Claude Code Skills
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+I build reusable Claude Code skills to speed up my own development workflow.
+Install them in any Claude Code session to get consistent, high-quality output
+for specific tasks without re-explaining things every time.
 
-## Deploy on Vercel
+→ **[github.com/difaei/skills](https://github.com/difaei/skills)**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Skill | What it does |
+|---|---|
+| `app-mockup.skill` | Generates an interactive phone or browser mockup for any app — reads your design tokens, builds realistic mock screens, tap-to-advance navigation |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+More skills added as I build them.
+
+---
+
+## Contact
+
+[simojamal.com](https://simojamal.com) · [linkedin.com/in/mohammedjamal1995](https://linkedin.com/in/mohammedjamal1995) · [@simojamal](https://github.com/simojamal)
