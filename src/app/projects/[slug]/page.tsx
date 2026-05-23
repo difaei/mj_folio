@@ -28,8 +28,8 @@ export default async function ProjectPage({ params }: Props) {
   const project = PROJECTS.find((p) => p.slug === slug);
   if (!project) notFound();
 
-  const statusLabel = project.status === "building" ? "Building" : "Side Project";
-  const statusClass = project.status === "building" ? "building" : "side";
+  const statusLabel = project.status === "building" ? "Building" : project.status === "active" ? "Active" : project.status === "live" ? "Live" : "Side Project";
+  const statusClass = project.status === "building" ? "building" : project.status === "active" ? "live" : "side";
 
   return (
     <>
@@ -152,7 +152,7 @@ export default async function ProjectPage({ params }: Props) {
               </a>
             ) : (
               <button className="modal-btn disabled" disabled>
-                {project.status === "building" ? "Coming Soon" : "Live URL TBD"}
+                {project.status === "building" ? "Coming Soon" : project.status === "active" ? "Running Internally" : "Live URL TBD"}
               </button>
             )}
             {project.githubUrl ? (

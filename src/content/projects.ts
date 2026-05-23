@@ -1,4 +1,4 @@
-export type ProjectStatus = "live" | "side" | "building";
+export type ProjectStatus = "live" | "side" | "building" | "active";
 
 export interface Project {
   slug: string;
@@ -172,7 +172,7 @@ export const PROJECTS: Project[] = [
     slug: "email-triage",
     name: "AI Email Triage Bot",
     category: "Automation",
-    status: "building",
+    status: "active",
     tagline: "Inbox zero, automated.",
     blurb:
       "Reads incoming emails, classifies urgency with AI, drafts replies, logs to Sheets.",
