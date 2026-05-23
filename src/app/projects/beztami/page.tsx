@@ -69,7 +69,7 @@ export default function BeztamiPage() {
           No alignItems — phone cell stretches to full grid height so the sticky
           div has room to travel. Footer appears full-width below the grid.
         */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 420px" }}>
+        <div className="project-layout" style={{ display: "grid", gridTemplateColumns: "1fr 420px" }}>
 
           {/* ── Left: scrollable content ── */}
           <div>

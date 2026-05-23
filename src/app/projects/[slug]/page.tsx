@@ -101,7 +101,7 @@ export default async function ProjectPage({ params }: Props) {
           </div>
 
           {/* Body */}
-          <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: "56px", marginTop: "48px" }}>
+          <div className="project-layout-basic" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: "56px", marginTop: "48px" }}>
             <div>
               <div className="modal-section-label">About this project</div>
               <p className="modal-desc" style={{ fontSize: "17px" }}>{project.description}</p>
