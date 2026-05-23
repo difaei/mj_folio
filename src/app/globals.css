@@ -779,14 +779,17 @@ footer {
   .j-dot { left: 8px; }
   /* Project page: collapse to single column on narrow screens */
   .project-layout { grid-template-columns: 1fr !important; }
+  /* Phone column moves to top */
   .project-layout > div:last-child {
+    order: -1;
     border-left: none !important;
-    border-top: 1px solid var(--line);
+    border-top: none;
+    border-bottom: 1px solid var(--line);
   }
   .project-layout > div:last-child > div {
     position: static !important;
-    height: 80vw !important;
-    max-height: 560px;
+    height: min(75vh, 600px) !important;
+    padding: 24px 20px !important;
   }
   .modal-hero { padding: 48px 24px 24px; }
   .modal-screenshots { padding: 24px 24px; }
