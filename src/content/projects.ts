@@ -70,6 +70,7 @@ export const PROJECTS: Project[] = [
     screenshots: [],
     hasPrivacyPolicy: false,
     hasSupport: false,
+    mockupType: "phone" as const,
   },
   {
     slug: "menuqr",

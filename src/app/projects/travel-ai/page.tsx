@@ -4,59 +4,54 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import PhoneMockup from "@/components/PhoneMockup";
 import {
-  HomeScreen,
-  InsightsScreen,
-  BudgetsScreen,
-  GoalsScreen,
-  GoalDetailScreen,
-  TransactionsScreen,
-} from "@/content/beztami-screens";
+  OnboardingScreen,
+  ResultsScreen,
+  DestinationScreen,
+  SavedScreen,
+} from "@/content/travel-ai-screens";
 
 const FEATURES = [
   {
-    title: "SMS-powered ingestion",
-    desc: "Reads bank SMS messages automatically and imports transactions with merchant detection and smart categorization.",
+    title: "Passport-aware filtering",
+    desc: "Pulls live visa data for your passport across 150+ destinations. Only shows places you can actually go.",
   },
   {
-    title: "Multi-currency support",
-    desc: "Works across AED, MAD, EUR, and more — converts everything to your primary currency using live exchange rates.",
+    title: "Budget-first recommendations",
+    desc: "Set a budget, get a realistic cost breakdown — flights, accommodation, food, and activities — before you commit.",
   },
   {
-    title: "Smart categorizer",
-    desc: "4-layer system learns from your corrections. Merchant overrides, keyword matching, and amount heuristics.",
+    title: "AI trip itineraries",
+    desc: "Claude-generated daily plans with stays, restaurants, and activities matched to your travel style.",
   },
   {
-    title: "Goal tracking",
-    desc: "Set savings goals with optional deadlines. Milestone timelines visualise your progress at every step.",
+    title: "Seasonal intelligence",
+    desc: "Flags destinations that are ideal or risky for your travel window. No more booking Bali in monsoon season.",
   },
   {
-    title: "Budget alerts",
-    desc: "Per-category monthly budgets with live colour-coded status: on track, near limit, and over budget.",
+    title: "Save & plan",
+    desc: "Bookmark destinations, add travel dates, and compare shortlisted options side by side.",
   },
   {
-    title: "100% local & private",
-    desc: "No server, no account, no cloud sync. All data lives in an encrypted SQLite database on your device.",
+    title: "Multi-language support",
+    desc: "Full Arabic, French, and English support — because not every traveller thinks in English.",
   },
 ];
 
 const STACK = [
+  "React Native",
   "Expo SDK 54",
-  "React Native 0.81",
-  "Expo Router v6",
-  "SQLite",
+  "Claude API",
+  "Supabase",
   "TypeScript",
-  "expo-sms",
-  "i18n (EN / FR / AR)",
+  "Tailwind (web)",
 ];
 
-export default function BeztamiPage() {
+export default function TravelAIPage() {
   const screens = [
-    <HomeScreen key="home" />,
-    <InsightsScreen key="insights" />,
-    <BudgetsScreen key="budgets" />,
-    <GoalsScreen key="goals" />,
-    <GoalDetailScreen key="goal-detail" />,
-    <TransactionsScreen key="txns" />,
+    <OnboardingScreen key="onboarding" />,
+    <ResultsScreen key="results" />,
+    <DestinationScreen key="destination" />,
+    <SavedScreen key="saved" />,
   ];
 
   return (
@@ -64,12 +59,7 @@ export default function BeztamiPage() {
       <Nav />
 
       <main style={{ paddingTop: 80 }}>
-        {/*
-          Grid: content left, phone right.
-          No alignItems — phone cell stretches to full grid height so the sticky
-          div has room to travel. Footer appears full-width below the grid.
-        */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 420px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 420px" }} className="project-layout">
 
           {/* ── Left: scrollable content ── */}
           <div>
@@ -89,7 +79,7 @@ export default function BeztamiPage() {
                   right: -80,
                   width: 480,
                   height: 480,
-                  background: "radial-gradient(circle, rgba(196,98,45,0.07) 0%, transparent 70%)",
+                  background: "radial-gradient(circle, rgba(255,107,61,0.06) 0%, transparent 70%)",
                   pointerEvents: "none",
                 }}
               />
@@ -122,7 +112,7 @@ export default function BeztamiPage() {
                     marginBottom: 20,
                   }}
                 >
-                  § Mobile · Finance · React Native
+                  § Mobile · AI · Travel
                 </div>
 
                 <h1
@@ -136,9 +126,9 @@ export default function BeztamiPage() {
                     marginBottom: 28,
                   }}
                 >
-                  Bez
+                  pass
                   <em style={{ fontStyle: "italic", fontWeight: 400, color: "var(--rust)" }}>
-                    tami
+                    ply
                   </em>
                 </h1>
 
@@ -153,13 +143,13 @@ export default function BeztamiPage() {
                     marginBottom: 32,
                   }}
                 >
-                  A personal finance tracker built for the MENA region. Reads bank
-                  SMS messages to auto-import transactions, tracks savings goals, and
-                  enforces budgets — entirely offline and private.
+                  A travel discovery app that starts with what you have — your
+                  passport and your budget — and surfaces where you can actually go.
+                  No visa surprises, no budget blowouts.
                 </p>
 
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                  {["React Native", "Expo SDK 54", "SQLite · Local-only"].map((t) => (
+                  {["React Native", "Claude API", "Passport-aware"].map((t) => (
                     <span
                       key={t}
                       style={{
@@ -294,7 +284,7 @@ export default function BeztamiPage() {
                 ))}
               </div>
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-                {["🤖 Coming to Play Store", "🐙 GitHub — private for now"].map((label) => (
+                {["🤖 Coming to App Store", "🐙 GitHub — private for now"].map((label) => (
                   <button
                     key={label}
                     disabled

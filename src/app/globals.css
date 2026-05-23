@@ -470,7 +470,7 @@ section.sec { padding: 120px 56px; position: relative; z-index: 2; }
 .modal {
   background: var(--ivory);
   border-radius: 14px;
-  max-width: 920px; width: 100%;
+  max-width: 1040px; width: 100%;
   border: 1px solid var(--line);
   box-shadow: 0 24px 64px rgba(31,41,55,0.25);
   overflow: hidden;
@@ -528,6 +528,38 @@ section.sec { padding: 120px 56px; position: relative; z-index: 2; }
 .modal-feature::before { content: ''; position: absolute; left: 0; top: 8px; width: 14px; height: 1px; background: var(--sun); }
 .modal-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 32px; }
 .modal-stack-tag { font-family: var(--mono); font-size: 12px; color: var(--navy); padding: 5px 12px; background: var(--ivory-dark); border: 1px solid var(--line); border-radius: 100px; }
+/* ── Phone mockup side-by-side layout ── */
+.modal-phone-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+.modal-phone-col {
+  padding: 16px 16px 12px;
+  align-self: start;
+  position: sticky;
+  top: 0;
+  height: 80vh;
+  overflow: hidden;
+  background: var(--ivory-dark);
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-info-col {
+  padding: 32px 40px 32px 36px;
+}
+.modal-info-col .modal-desc { font-size: 14px; margin-bottom: 24px; }
+.modal-info-col .modal-features { margin-bottom: 24px; }
+.modal-info-col .modal-section-label { margin-bottom: 10px; }
+@media (max-width: 720px) {
+  .modal-phone-layout { grid-template-columns: 1fr; }
+  .modal-phone-col { align-self: auto; border-right: none; border-bottom: 1px solid var(--line); padding: 28px 24px; position: static; }
+  .modal-info-col { padding: 24px; }
+}
+
 .modal-actions { display: flex; gap: 12px; flex-wrap: wrap; padding: 24px 48px 48px; border-top: 1px solid var(--line); margin-top: 0; background: var(--ivory-dark); }
 .modal-btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.05em; text-decoration: none; border-radius: 100px; transition: transform .2s, box-shadow .25s; cursor: pointer; border: none; }
 .modal-btn-primary { background: var(--navy); color: var(--ivory); }
@@ -745,6 +777,17 @@ footer {
   .j-item { padding-left: 60px; }
   .journey-line { left: 18px; }
   .j-dot { left: 8px; }
+  /* Project page: collapse to single column on narrow screens */
+  .project-layout { grid-template-columns: 1fr !important; }
+  .project-layout > div:last-child {
+    border-left: none !important;
+    border-top: 1px solid var(--line);
+  }
+  .project-layout > div:last-child > div {
+    position: static !important;
+    height: 80vw !important;
+    max-height: 560px;
+  }
   .modal-hero { padding: 48px 24px 24px; }
   .modal-screenshots { padding: 24px 24px; }
   .modal-body { padding: 8px 24px 24px; }
