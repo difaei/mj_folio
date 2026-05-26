@@ -164,7 +164,7 @@ export const PROJECTS: Project[] = [
     stack: ["n8n", "Claude API", "Slack API", "Google Sheets"],
     liveUrl: null,
     githubUrl: null,
-    screenshots: [],
+    screenshots: ["/images/IT_support.png"],
     hasPrivacyPolicy: false,
     hasSupport: false,
   },
